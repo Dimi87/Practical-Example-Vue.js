@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tue Example</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="user-card">
+        <figure class="user-card__figure">
+          <caption>
+            <h2 class="user-card__hl">Attendee Pass</h2>
+            <p>Coding Bootcamps Europe</p>
+          </caption>
+        </figure>
+        <div class="user-card__data">
+          <h2>{{ displayName }}</h2>
+          <p><strong>Class:</strong> {{ displayClass }}</p>
+        </div>
+      </div>
+      <form class="user-card__form">
+        <label for="person-name">Name</label>
+        <input id="person-name" name="person-name" v-model="personName" type="text" />
+    
+        <label for="class">Class</label>
+        <select id="class" v-model="selectedClass">
+          <option v-for="classItem in classes" :key="classItem.value" :value="classItem">
+            {{ classItem.text }}
+          </option>
+        </select>
+      </form>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="script.js"></script>  
+  </body>
+</html>
