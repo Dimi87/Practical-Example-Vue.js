@@ -1,8 +1,6 @@
 Vue.createApp({
     data() {
       return {
-        image:
-          "https://coursereport-s3-production.global.ssl.fastly.net/uploads/school/logo/1327/original/Coding_Bootcamps_Europe_logo.png",
         personName: "",
         selectedClass: null,
         classes: [
